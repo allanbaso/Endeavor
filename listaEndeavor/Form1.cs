@@ -231,7 +231,7 @@ namespace listaEndeavor
                                 int fila = searchText("ENVIRONMENT", PresSpace, 1);
                                 int colmna = searchText("ENVIRONMENT", PresSpace, 2);
                                 
-                               // PresSpace.SendKeys("[erase eof]" , 13, 21);
+                                PresSpace.SendKeys("N", 14, 71);
                                 colmna += 17;
                                 PresSpace.SendKeys("[erase eof]", fila, colmna);//12,21
                                 PresSpace.SendKeys(variables[2].Trim() + "", fila, colmna);//system
@@ -252,7 +252,7 @@ namespace listaEndeavor
                                 {
                                     listadoRepetido = listadoRepetido + variables[0] + "\t" + variables[1] + "\t" + variables[2] + "\t" + variables[3] + "\t" + variables[4] + "\t" + variables[5] + "\n";
                                 }
-                                if (searchText("NO ELEMENTS SELECTED", PresSpace) /*| searchText("NO TYPES MATCH", PresSpace)*/)
+                                if (searchText("NO ELEMENTS SELECTED", PresSpace) | searchText("NO ENVIRONMENT MATCH", PresSpace))
                                 {
                                     listadoNOExiste = listadoNOExiste + variables[0] + "\t" + variables[1] + "\t" + variables[2] + "\t" + variables[3] + "\t" + variables[4] + "\t" + variables[5] + "\n";
                                 }
